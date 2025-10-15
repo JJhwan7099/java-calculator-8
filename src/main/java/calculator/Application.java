@@ -3,7 +3,6 @@ package calculator;
 import camp.nextstep.edu.missionutils.Console;
 
 import java.util.HashSet;
-import java.util.Scanner;
 import java.util.Set;
 
 public class Application {
@@ -22,6 +21,16 @@ public class Application {
         }
 
         String[] parts = splitByDelimiters(input, delimiters);
+        int result = 0;
+        for (String part : parts) {
+            try {
+                result = result + Integer.parseInt(part.trim());
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("입력값이 잘못되었습니다.");
+            }
+        }
+
+        System.out.println("결과 : " + result);
     }
 
     private static String getStringWithoutCustomDelimiter(String input) {
@@ -48,14 +57,14 @@ public class Application {
         if(parts.length != 2) {
             return false;
         }
-        if(!parts[0].startsWith("//")) {
-            return false;
-        }
-        return true;
+        return parts[0].startsWith("//");
     }
 
     private static String extractDelimiter(String str) {
-        String result = str.split("\\\\n")[0].trim().split("//")[1].trim();
-        return result;
+        String[] parts = str.split("\\\\n")[0].trim().split("//");
+        if(parts.length != 2) {
+            throw new IllegalArgumentException("구분자가 빈값입니다.");
+        }
+        return parts[1].trim();
     }
 }
