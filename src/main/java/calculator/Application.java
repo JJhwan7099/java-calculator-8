@@ -16,7 +16,16 @@ public class Application {
         System.out.println("덧셈할 문자열을 입력해 주세요.");
         String input = Console.readLine();
 
+        if(isExistCustomDelimiter(input)) {
+            delimiters.add(extractDelimiter(input));
+            input = getStringWithoutCustomDelimiter(input);
+        }
+
         String[] parts = splitByDelimiters(input, delimiters);
+    }
+
+    private static String getStringWithoutCustomDelimiter(String input) {
+        return input.split("\\\\n")[1].trim();
     }
 
     private static String[] splitByDelimiters(String str, Set<String> delimiters) {
@@ -32,5 +41,21 @@ public class Application {
         }
         result += tmpStr;
         return result.split(",");
+    }
+
+    private static boolean isExistCustomDelimiter(String str) {
+        String[] parts = str.split("\\\\n");
+        if(parts.length != 2) {
+            return false;
+        }
+        if(!parts[0].startsWith("//")) {
+            return false;
+        }
+        return true;
+    }
+
+    private static String extractDelimiter(String str) {
+        String result = str.split("\\\\n")[0].trim().split("//")[1].trim();
+        return result;
     }
 }
