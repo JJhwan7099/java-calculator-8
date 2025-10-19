@@ -43,3 +43,13 @@
 ## 고민 내용
 - Application.java에 모든 로직이 몰려있어서 책임 혹은 역할 분배를 하는것이 좋을까?
   - MVC패턴에 맞춰서 구조를 변경.
+  - 
+    |클래스|역할|
+    | - |--|
+    | **Application** | 프로그램 시작, Controller 실행 |
+    | **CalculatorController** | 흐름 제어 (View <=> Model 연결) |
+    | **Calculator** | 실제 계산 로직 (Model) |
+    | **InputView** | 사용자 입력 담당 |
+    | **OutputView** | 출력 담당 |
+    | **Validator** | 유효성 검사 (음수, 잘못된 입력 등) |
+
