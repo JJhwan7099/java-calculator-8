@@ -43,7 +43,7 @@ public class InputParser {
         }
         result += token;
 
-        String[] numbers = result.split(",");
+        String[] numbers = result.split(",", -1);
         validator.validateParsedNumbers(numbers);
         return numbers;
     }
