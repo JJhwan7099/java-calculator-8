@@ -83,3 +83,9 @@
     - 결과 <br>
       <img width="761" height="65" alt="image" src="https://github.com/user-attachments/assets/16d30357-80fd-44d6-97a1-a7ad26b4b136" />
 
+- 커스텀 구분자 추가부분과 계산할 문자열 사이에 공백이 있을때 에러가 발생하지 않음.
+    - ex) <br>
+    <img width="406" height="134" alt="image" src="https://github.com/user-attachments/assets/5268cdf3-1b24-4191-a0bf-8260211f6b7c" />
+
+    
+
