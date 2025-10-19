@@ -49,6 +49,7 @@
     | **Application** | 프로그램 시작, Controller 실행 |
     | **CalculatorController** | 흐름 제어 (View <=> Model 연결) |
     | **Calculator** | 실제 계산 로직 (Model) |
+    | **InputParser** | 입력값 파싱 로직 (Model) |
     | **InputView** | 사용자 입력 담당 |
     | **OutputView** | 출력 담당 |
     | **Validator** | 유효성 검사 (음수, 잘못된 입력 등) |
