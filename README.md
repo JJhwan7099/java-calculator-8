@@ -93,5 +93,18 @@
     - 결과 <br>
     <img width="1536" height="374" alt="image" src="https://github.com/user-attachments/assets/921b8e08-d483-4c0a-877e-d33fdb681c3e" />
 
+
+- 커스텀 구분자 추가시 공백이 들어갔을때 에러가 발생하지 않음.
+    - ex) <br>
+    <img width="190" height="65" alt="image" src="https://github.com/user-attachments/assets/cebc828d-2bc3-4202-85db-03d76c422dfd" /> <br>
+    - 원인
+      - 커스텀 구분자 추출시 trim()을 하기 때문에 공백이 사라지게됨.
+    - 해결방법
+      - 커스텀 구분자 추출함수의 trim() 제거 및 Validator에 구분자 길이 검증함수 구현.
+    - 결과 <br>
+    <img width="1520" height="364" alt="image" src="https://github.com/user-attachments/assets/c97a864f-b8e1-4ca0-9152-9a91c9672948" />
+
+    
+
     
 
