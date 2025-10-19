@@ -74,3 +74,8 @@
   - 모든 역할을 확실하게 나누는 것은 상황에 따라 불가능할 수도 있다는 결론. 따라서 위 방식을 유지하자!
 
 ## 트러블 슈팅
+- split() 함수를 실행결과 문자열 마지막에 구분자가 있을때 배열의 마지막 항목에 빈값이 추가되지 않아서 검증이 어려운 상황이 발생함.
+    <img width="388" height="142" alt="image" src="https://github.com/user-attachments/assets/ed811c62-d4cd-4c82-985c-d5489fd521b1" />
+    - split() 함수 두번째 인자에 -1을 입력하자!
+      - String[] result = str.split(regex, limit);
+      - limit값이 0보다 작다면, 최대 limit - 1번까지 분리, 남은 문자열은 마지막 요소에 포함!
