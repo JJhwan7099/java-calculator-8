@@ -6,9 +6,6 @@ import calculator.validator.Validator;
 import calculator.view.InputView;
 import calculator.view.OutputView;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class CalculatorController {
 
     private final Validator validator = new Validator();
