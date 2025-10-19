@@ -79,3 +79,6 @@
     - split() 함수 두번째 인자에 -1을 입력하자!
       - String[] result = str.split(regex, limit);
       - limit값이 0보다 작다면, 최대 limit - 1번까지 분리, 남은 문자열은 마지막 요소에 포함!
+    - 결과 <br>
+      <img width="761" height="65" alt="image" src="https://github.com/user-attachments/assets/16d30357-80fd-44d6-97a1-a7ad26b4b136" />
+
