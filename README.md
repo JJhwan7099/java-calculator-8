@@ -102,7 +102,8 @@
     - 해결방법
       - 커스텀 구분자 추출함수의 trim() 제거 및 Validator에 구분자 길이 검증함수 구현.
     - 결과 <br>
-    <img width="1520" height="364" alt="image" src="https://github.com/user-attachments/assets/c97a864f-b8e1-4ca0-9152-9a91c9672948" />
+    <img width="1518" height="376" alt="image" src="https://github.com/user-attachments/assets/74ec4fcc-835d-44a6-95fc-662c9e18d393" />
+
 
     
 
