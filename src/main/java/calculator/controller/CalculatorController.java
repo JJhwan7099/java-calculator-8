@@ -6,6 +6,9 @@ import calculator.validator.Validator;
 import calculator.view.InputView;
 import calculator.view.OutputView;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class CalculatorController {
 
     private final Validator validator = new Validator();
@@ -15,5 +18,11 @@ public class CalculatorController {
     private final InputParser inputParser = new InputParser(validator);
 
     public void run() {
+        String input = inputView.mainInputView();
+
+        String[] numbers = inputParser.parse(input);
+        int result = calculator.calculate(numbers);
+
+        outputView.outputResult(result);
     }
 }
