@@ -7,9 +7,15 @@ public class Validator {
         }
     }
 
-    public void validateCustomDelimiter(String[] parts) {
+    public void validateExtractCustomDelimiter(String[] parts) {
         if(parts.length != 2) {
             throw new IllegalArgumentException("구분자가 빈값입니다.");
+        }
+    }
+
+    public void validateCustomDelimiter(String delimiter) {
+        if (delimiter == null || delimiter.length() != 1) {
+            throw new IllegalArgumentException("입력값이 잘못되었습니다.");
         }
     }
 

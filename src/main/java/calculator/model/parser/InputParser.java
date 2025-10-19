@@ -53,8 +53,10 @@ public class InputParser {
 
     private String extractDelimiter(String input) {
         String[] parts = input.split("\\\\n")[0].trim().split("//");
-        validator.validateCustomDelimiter(parts);
-        return parts[1].trim();
+        validator.validateExtractCustomDelimiter(parts);
+        String delimiter = parts[1];
+        validator.validateCustomDelimiter(delimiter);
+        return parts[1];
     }
 
     private boolean isExistCustomDelimiter(String str) {
