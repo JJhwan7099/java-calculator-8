@@ -48,7 +48,7 @@ public class InputParser {
     }
 
     private String getStringWithoutCustomDelimiter(String input) {
-        return input.split("\\\\n")[1].trim();
+        return input.split("\\\\n")[1];
     }
 
     private String extractDelimiter(String input) {
