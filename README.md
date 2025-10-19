@@ -85,10 +85,13 @@
 
 - 커스텀 구분자 추가부분과 계산할 문자열 사이에 공백이 있을때 에러가 발생하지 않음.
     - ex) <br>
-    <img width="406" height="134" alt="image" src="https://github.com/user-attachments/assets/5268cdf3-1b24-4191-a0bf-8260211f6b7c" />
+    <img width="406" height="134" alt="image" src="https://github.com/user-attachments/assets/5268cdf3-1b24-4191-a0bf-8260211f6b7c" /> <br>
     - 원인
       - targetString을 추출할때 trim()을 하기 때문에 공백이 사라지게됨.
     - 해결방법
       - trim()제거이후 Validation에서 검증
+    - 결과 <br>
+    <img width="1536" height="374" alt="image" src="https://github.com/user-attachments/assets/921b8e08-d483-4c0a-877e-d33fdb681c3e" />
+
     
 
