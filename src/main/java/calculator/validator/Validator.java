@@ -15,7 +15,6 @@ public class Validator {
 
     public void validateParsedNumbers(String[] numbers) {
         for (String number : numbers) {
-            System.out.println("number = " + number);
             if (number == null || number.isEmpty() || !Character.isDigit(number.charAt(0))) {
                 throw new IllegalArgumentException("입력값이 잘못되었습니다.");
             }
