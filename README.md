@@ -54,3 +54,22 @@
     | **OutputView** | 출력 담당 |
     | **Validator** | 유효성 검사 (음수, 잘못된 입력 등) |
 
+- Calculator에서 String 형태의 숫자를 int로 변경하면서 숫자가 아닐때 발생하는 NumberForMatException을 예외처리 하는데, 이 역할을 validator에서 수행하는게 맞을지?
+  ```java
+  // String 형태의 숫자를 int형으로 변환하는 부분
+  public int calculate(String[] numbers) {
+        int result = 0;
+        for (String number : numbers) {
+            try{
+                result += Integer.parseInt(number);
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("입력값이 잘못되었습니다.");
+            }
+        }
+        return result;
+    }
+  ```
+  - 만약 Validator에서 이 과정을 수행한다면 Integer.parseInt()롤 실행해야하는데, Validator와 Calculator에서 Integer.parseInt()를 각각 수행하게 되면, 같은 과정을 2번 실행해야하는 상황이 발생함.
+  - Validator 클래스에서 Integer.parseInt()를 수행하고 변경된 정수를 반환한다면 Validator의 역할을 벗어나는것이 아닐까?
+  - 모든 역할을 확실하게 나누는 것은 상황에 따라 불가능할 수도 있다는 결론. 따라서 위 방식을 유지하자!
+
